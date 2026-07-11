@@ -29,7 +29,7 @@
   <!-- main statement -->
   <text x="56" y="108" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#22c55e" letter-spacing="4" font-weight="500">KARTIK HULMUKH</text>
   
-  <text x="56" y="168" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="700" fill="#ffffff" fill-opacity="0.9">I build things that leave</text>
+  <text x="56" y="168" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="700" fill="#ffffff" fill-opacity="0.9">I am interested in building things that leave </text>
   <text x="56" y="222" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="700" fill="url(#accent)">evidence.</text>
 
   <!-- prompt line -->
