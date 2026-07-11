@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img alt="Kartik Hulmukh — I build things that leave evidence." src="assets/header-light.svg" width="100%">
+  <img alt="Kartik Hulmukh — I am interested in building things that leave evidence." src="assets/header-light.svg" width="100%">
 </picture>
 
 <br>
