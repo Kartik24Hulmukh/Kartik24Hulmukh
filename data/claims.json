@@ -1,0 +1,25 @@
+{
+  "claims": [
+    {
+      "id": "kairo-airgap",
+      "project": "Kairo-Phantom",
+      "claim": "Published sealed-mode test surface reported zero outbound connections across 12 tests.",
+      "evidence": "https://github.com/Kartik24Hulmukh/Kairo-Phantom/blob/master/BENCHMARKS.md",
+      "boundary": "Not an independent security certification; applies to the declared tested interfaces and environment."
+    },
+    {
+      "id": "rgit-tests",
+      "project": "RGIT Rozgar",
+      "claim": "Repository documents 148 automated unit and contract tests.",
+      "evidence": "https://github.com/Kartik24Hulmukh/unified-experience",
+      "boundary": "Test count is not a usage or social-impact metric."
+    },
+    {
+      "id": "xray-beta",
+      "project": "Project X-Ray India",
+      "claim": "Public-beta implementation supports source-linked dossiers and human review gates.",
+      "evidence": "https://github.com/Kartik24Hulmukh/project-xray-india",
+      "boundary": "Does not determine corruption or replace official systems."
+    }
+  ]
+}

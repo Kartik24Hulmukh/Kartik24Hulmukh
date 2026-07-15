@@ -28,7 +28,7 @@ build → test → explain → improve
 | [Kairo-Phantom](https://github.com/Kartik24Hulmukh/Kairo-Phantom) | Make computer-use agents easier to audit without depending on the agent's own explanation. | Fork maintainer ([upstream](https://github.com/KairoPhantom/Kairo-Phantom)). Agent orchestration, verification, adversarial testing, local-first operation, documentation. | [Benchmarks](https://github.com/Kartik24Hulmukh/Kairo-Phantom/blob/master/BENCHMARKS.md) · pre-launch; independent third-party validation is pending. |
 | [RGIT Rozgar](https://rgitrozgar.in) | Bring everyday campus resources into one governed service. | Product, UX, frontend, backend, database, security, tests, deployment, policies. | [Live product](https://rgitrozgar.in) · campus-specific; usage figures are published only when measured. |
 | [Project X-Ray India](https://github.com/Kartik24Hulmukh/project-xray-india) | Organize source-linked public-infrastructure claims for human review. | Evidence model, review gates, auditability, release discipline, product implementation. | Public beta; it supports investigation and does not determine corruption. |
-| [Proving Grounds](https://github.com/KairoPhantom/Proving-Grounds) | Evaluate code changes against explicit behavioral claims instead of model confidence. | Contributor (under [KairoPhantom](https://github.com/KairoPhantom) org). Evidence capsules, adversarial probes, developer-tooling research. | Experimental; bounded executable evidence, not formal verification. |
+| [Proving Grounds](https://github.com/KairoPhantom/Proving-Grounds) | Evaluate code changes against explicit behavioral claims instead of model confidence. | Contributor (under KairoPhantom org). Evidence capsules, adversarial probes, developer-tooling research. | Experimental; bounded executable evidence, not formal verification. |
 
 <!-- dynamic:start -->
 ## Live repository status
@@ -37,10 +37,10 @@ _This block is generated from GitHub's API. It reports repository state, not per
 
 | Project | Revision | CI | Latest release |
 |---|---|---|---|
-| Kairo-Phantom | [`37fe3ef`](https://github.com/Kartik24Hulmukh/Kairo-Phantom/commit/37fe3ef533955df27e60baf13f45b6b22e5321bf) | [success](https://github.com/Kartik24Hulmukh/Kairo-Phantom/actions/runs/29359362443) | not published |
-| RGIT Rozgar | [`f0d2173`](https://github.com/Kartik24Hulmukh/unified-experience/commit/f0d2173f42581980c052827f723cffb75b95362b) | [failure](https://github.com/Kartik24Hulmukh/unified-experience/actions/runs/29270750755) | not published |
-| Project X-Ray India | [`83ea0dc`](https://github.com/Kartik24Hulmukh/project-xray-india/commit/83ea0dcb74b36409e18fbe9118170bbe1cdb3a0d) | [success](https://github.com/Kartik24Hulmukh/project-xray-india/actions/runs/29342315866) | not published |
-| Proving Grounds | [`9f66f1c`](https://github.com/Kartik24Hulmukh/Proving-Grounds/commit/9f66f1caca842df41c9de49c88ef8d91df3298d5) | [success](https://github.com/KairoPhantom/Proving-Grounds/actions/runs/29197366784) | not published |
+| Kairo-Phantom | not checked | not checked | not checked |
+| RGIT Rozgar | not checked | not checked | not checked |
+| Project X-Ray India | not checked | not checked | not checked |
+| Proving Grounds | not checked | not checked | not checked |
 <!-- dynamic:end -->
 
 ## Reproduce one result

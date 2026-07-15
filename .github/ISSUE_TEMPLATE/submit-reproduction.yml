@@ -1,0 +1,42 @@
+name: Submit an independent reproduction
+description: Share a result from running a published verification path
+title: '[reproduction] '
+labels: ['independent-reproduction']
+body:
+  - type: input
+    id: result
+    attributes:
+      label: Result reproduced
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Repository revision or release
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, runtime versions, hardware where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands executed
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Observed output
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: differences
+    attributes:
+      label: Differences from the published result

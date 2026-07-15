@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "name": "Kairo-Phantom",
+      "repo": "Kartik24Hulmukh/Kairo-Phantom",
+      "branch": "master",
+      "display_status": "pre-launch"
+    },
+    {
+      "name": "RGIT Rozgar",
+      "repo": "Kartik24Hulmukh/unified-experience",
+      "branch": "main",
+      "display_status": "deployed"
+    },
+    {
+      "name": "Project X-Ray India",
+      "repo": "Kartik24Hulmukh/project-xray-india",
+      "branch": "main",
+      "display_status": "public beta"
+    },
+    {
+      "name": "Proving Grounds",
+      "repo": "Kartik24Hulmukh/Proving-Grounds",
+      "branch": "main",
+      "display_status": "experimental"
+    }
+  ]
+}

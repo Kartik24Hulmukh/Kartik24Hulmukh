@@ -1,0 +1,41 @@
+name: Challenge a public claim
+description: Report a claim that is unclear, overstated, stale, or difficult to reproduce
+title: '[claim] '
+labels: ['claim-review']
+body:
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      options:
+        - Kairo-Phantom
+        - RGIT Rozgar
+        - Project X-Ray India
+        - Proving Grounds
+        - Profile README
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim being challenged
+      description: Quote or link to the exact wording.
+    validations:
+      required: true
+  - type: textarea
+    id: attempt
+    attributes:
+      label: Reproduction or review attempted
+      description: Include commands, environment, links, or reasoning.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What you observed
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Missing evidence or boundary
