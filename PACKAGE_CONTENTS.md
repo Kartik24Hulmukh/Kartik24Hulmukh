@@ -1,11 +1,11 @@
 # Package contents
 
-- `README.md` — concise GitHub-native profile.
-- `assets/*.svg` — deterministic light/dark visual panels.
+- `README.md` — concise GitHub-native Verified Noticeboard profile.
+- `assets/*.svg` — deterministic light/dark editorial panels.
 - `data/` — manually approved projects, claims, current work, and generated snapshot.
-- `scripts/` — allowlisted collector, renderers, and validator.
+- `scripts/` — allowlisted collector, editorial renderer, and validator.
 - `.github/workflows/` — read-only verification and least-privilege refresh.
 - `.github/ISSUE_TEMPLATE/` — claim challenge and reproduction interface.
-- `docs/` — deployment, operating boundaries, and recruiter path.
+- `docs/` — Evidence Atlas (GitHub Pages), deployment notes, operating boundaries, recruiter path.
 
-This is ready to push after Kartik's final review of public claims and personal details.
+This package replaces the Build Console design completely.

@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-07-15T21:52:18.262789Z",
+  "collected_at": "2026-07-15T22:32:58.456176Z",
   "projects": [
     {
       "id": "rgit",
@@ -29,5 +29,6 @@
       "ci": "success",
       "release": null
     }
-  ]
+  ],
+  "collection_status": "ok"
 }

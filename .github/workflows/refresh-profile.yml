@@ -13,22 +13,31 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Setup Python
+        uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
         with:
           python-version: "3.12"
       - name: Collect allowlisted public evidence
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/collect.py
-      - run: python scripts/render_now.py
-      - run: python scripts/render_assets.py
-      - run: python scripts/validate.py
-      - name: Commit only meaningful changes
+      - name: Render editorial assets
+        run: python scripts/render_editorial.py
+      - name: Validate noticeboard
+        run: python scripts/validate.py
+      - name: Commit only meaningful generated changes
         run: |
-          if git diff --quiet -- README.md data/snapshot.json assets; then exit 0; fi
+          if git diff --quiet -- data/snapshot.json assets; then
+            echo "No meaningful evidence changes."
+            exit 0
+          fi
           git config user.name "profile-evidence-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md data/snapshot.json assets
-          git commit -m "chore(profile): refresh evidence"
-          git push
+          git add data/snapshot.json assets
+          # README is human-authored in this design; only commit generated evidence/assets.
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(profile): refresh public evidence"
+            git push
+          fi

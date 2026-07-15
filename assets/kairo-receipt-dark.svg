@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img"><rect width="100%" height="100%" fill="#141310"/>
+<text x="54" y="58" font-family="Arial" font-size="13" fill="#e16654" letter-spacing="2">ACTION REVIEW / KP-01976 / PRE-LAUNCH</text>
+<line x1="54" y1="80" x2="1146" y2="80" stroke="#4a4439"/>
+<text x="54" y="137" font-family="Georgia" font-size="36" fill="#f3ead8">The model can make a claim.</text>
+<text x="54" y="182" font-family="Georgia" font-size="36" fill="#f3ead8">The receipt has to prove it.</text>
+<line x1="620" y1="110" x2="620" y2="454" stroke="#4a4439"/>
+<text x="660" y="130" font-family="Arial" font-size="13" fill="#b9ad98">OPERATION</text>
+<text x="885" y="130" font-family="Arial" font-size="15" fill="#f3ead8">LOCAL APPLICATION ACTION</text>
+<text x="660" y="183" font-family="Arial" font-size="13" fill="#b9ad98">NETWORK</text>
+<text x="885" y="183" font-family="Arial" font-size="15" fill="#f3ead8">DECLARED TEST: ZERO EGRESS</text>
+<text x="660" y="236" font-family="Arial" font-size="13" fill="#b9ad98">CONFIRMATION</text>
+<text x="885" y="236" font-family="Arial" font-size="15" fill="#f3ead8">REQUIRED BEFORE WRITE</text>
+<text x="660" y="289" font-family="Arial" font-size="13" fill="#b9ad98">EVIDENCE</text>
+<text x="885" y="289" font-family="Arial" font-size="15" fill="#f3ead8">SIGNED + HASH-CHAINED</text>
+<text x="660" y="342" font-family="Arial" font-size="13" fill="#b9ad98">VALIDATION</text>
+<text x="885" y="342" font-family="Arial" font-size="15" fill="#e16654">THIRD-PARTY PENDING</text>
+<text x="54" y="360" font-family="Arial" font-size="15" fill="#83a9d5">Separately runnable ≠ independently validated.</text>
+<text x="54" y="400" font-family="Arial" font-size="14" fill="#b9ad98">Visual explanation—not a claim that this exact action occurred.</text>
+</svg>
