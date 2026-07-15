@@ -1,0 +1,7 @@
+{
+  "items": [
+    "Separate producer and verifier implementations for agent receipts.",
+    "Detect deliberately weakened tests instead of rewarding convincing patch prose.",
+    "Preserve uncertainty in public-interest software without making the product unusable."
+  ]
+}

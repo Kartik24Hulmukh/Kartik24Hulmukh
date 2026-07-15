@@ -1,51 +1,85 @@
+<div align="center">
+  <a href="https://github.com/Kartik24Hulmukh?tab=repositories"><img src="./assets/build-console.svg" width="100%" alt="Kartik Build Console — product and systems builder in Mumbai" /></a>
+</div>
+
 <p align="center">
-  <img src="assets/mission-control.svg" alt="Kartik Hulmukh — current work and project status" width="100%" />
+  <strong>Founder-led community products · Local-first AI · Replayable engineering evidence</strong><br/>
+  <sub>I build the product, test the claim, and publish the boundary.</sub>
 </p>
 
-# Kartik Hulmukh
+<p align="center">
+  <a href="https://rgitrozgar.in">Live product</a> ·
+  <a href="https://github.com/Kartik24Hulmukh/Kairo-Phantom">Inspect a system</a> ·
+  <a href="#run-an-experiment">Run an experiment</a> ·
+  <a href="https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=challenge-claim.yml">Challenge a claim</a>
+</p>
 
-Computer Engineering student in Mumbai building useful software for communities and systems that need to be inspectable. Useful beats impressive.
+## Two tracks. One operating rule.
 
-I built and maintain [RGIT Rozgar](https://rgitrozgar.in), a campus platform for accommodation, resale, academic resources, food services, and nearby healthcare. I also work on [Kairo-Phantom](https://github.com/Kartik24Hulmukh/Kairo-Phantom), a local-first AI desktop agent that produces signed, independently checkable records of its actions.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-```text
-build → test → explain → improve
-```
+### Products for real communities
 
-[30-second view](#in-30-seconds) · [Current work](#current-work) · [Reproduce a result](#reproduce-one-result) · [Challenge a claim](#challenge-a-claim)
+**RGIT Rozgar** is a campus platform I founded, built, deployed, and maintain for accommodation, resale, academic resources, food services, and nearby healthcare.
 
-## In 30 seconds
+[Open the live product →](https://rgitrozgar.in)
 
-- Built and maintain a deployed campus-resource platform, from product design through backend, database, testing, deployment, and documentation.
-- Work on offline AI agents, executable evidence for code changes, public-interest software, and systems that preserve failure context.
-- Prefer measured claims, visible limitations, and reproducible commands over broad labels.
-- Currently studying Computer Engineering and participating in the Gumloop learning cohort and community.
+</td>
+<td width="50%" valign="top">
 
-## Current work
+### Systems that leave evidence
 
-| Project | Why it exists | My work | Proof and current boundary |
-|---|---|---|---|
-| [Kairo-Phantom](https://github.com/Kartik24Hulmukh/Kairo-Phantom) | Make computer-use agents easier to audit without depending on the agent's own explanation. | Fork maintainer ([upstream](https://github.com/KairoPhantom/Kairo-Phantom)). Agent orchestration, verification, adversarial testing, local-first operation, documentation. | [Benchmarks](https://github.com/Kartik24Hulmukh/Kairo-Phantom/blob/master/BENCHMARKS.md) · pre-launch; independent third-party validation is pending. |
-| [RGIT Rozgar](https://rgitrozgar.in) | Bring everyday campus resources into one governed service. | Product, UX, frontend, backend, database, security, tests, deployment, policies. | [Live product](https://rgitrozgar.in) · campus-specific; usage figures are published only when measured. |
-| [Project X-Ray India](https://github.com/Kartik24Hulmukh/project-xray-india) | Organize source-linked public-infrastructure claims for human review. | Evidence model, review gates, auditability, release discipline, product implementation. | Public beta; it supports investigation and does not determine corruption. |
-| [Proving Grounds](https://github.com/KairoPhantom/Proving-Grounds) | Evaluate code changes against explicit behavioral claims instead of model confidence. | Contributor (under [KairoPhantom](https://github.com/KairoPhantom) org). Evidence capsules, adversarial probes, developer-tooling research. | Experimental; bounded executable evidence, not formal verification. |
+I work on local-first agents and developer tools whose outputs can be checked without trusting the system's own explanation.
 
-<!-- dynamic:start -->
-## Live repository status
+[Inspect Kairo-Phantom →](https://github.com/Kartik24Hulmukh/Kairo-Phantom)
 
-_This block is generated from GitHub's API. It reports repository state, not personal worth or activity theatre._
+</td>
+</tr>
+</table>
 
-| Project | Revision | CI | Latest release |
-|---|---|---|---|
-| Kairo-Phantom | [`37fe3ef`](https://github.com/Kartik24Hulmukh/Kairo-Phantom/commit/37fe3ef533955df27e60baf13f45b6b22e5321bf) | [success](https://github.com/Kartik24Hulmukh/Kairo-Phantom/actions/runs/29359362443) | not published |
-| RGIT Rozgar | [`f0d2173`](https://github.com/Kartik24Hulmukh/unified-experience/commit/f0d2173f42581980c052827f723cffb75b95362b) | [failure](https://github.com/Kartik24Hulmukh/unified-experience/actions/runs/29270750755) | not published |
-| Project X-Ray India | [`83ea0dc`](https://github.com/Kartik24Hulmukh/project-xray-india/commit/83ea0dcb74b36409e18fbe9118170bbe1cdb3a0d) | [success](https://github.com/Kartik24Hulmukh/project-xray-india/actions/runs/29342315866) | not published |
-| Proving Grounds | [`9f66f1c`](https://github.com/Kartik24Hulmukh/Proving-Grounds/commit/9f66f1caca842df41c9de49c88ef8d91df3298d5) | [success](https://github.com/KairoPhantom/Proving-Grounds/actions/runs/29197366784) | not published |
-<!-- dynamic:end -->
+## Selected builds
 
-## Reproduce one result
+<a href="https://rgitrozgar.in"><img src="./assets/project-rgit.svg" width="100%" alt="RGIT Rozgar — founder, product engineer, operator; deployed campus resource platform" /></a>
 
-Kairo-Phantom's published benchmark reports zero outbound connections across its declared sealed-mode test surface.
+<a href="https://github.com/Kartik24Hulmukh/Kairo-Phantom"><img src="./assets/project-kairo.svg" width="100%" alt="Kairo-Phantom — lead builder and maintainer; pre-launch local-first AI agent with signed records" /></a>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### Project X-Ray India
+**Engineering contributor · public beta**
+
+Source-linked public-infrastructure claims for human investigation. It supports review; it does not determine corruption.
+
+[Review the repository →](https://github.com/Kartik24Hulmukh/project-xray-india)
+
+</td>
+<td width="50%" valign="top">
+
+#### Proving Grounds
+**Builder · contributor · experimental**
+
+Runs explicit behavioral claims against code revisions and emits replayable evidence capsules. Bounded evidence—not formal proof.
+
+[Explore the build kit →](https://github.com/KairoPhantom/Proving-Grounds)
+
+</td>
+</tr>
+</table>
+
+## Live engineering signal
+
+<a href="./data/snapshot.json"><img src="./assets/telemetry.svg" width="100%" alt="Generated repository telemetry for four selected projects, including revision and CI state" /></a>
+
+<sub>Generated from allowlisted public repositories. A passing check is repository state—not a quality score or security certification. [Inspect the source data](./data/snapshot.json).</sub>
+
+## Run an experiment
+
+<details>
+<summary><strong>01 · Test Kairo's declared zero-egress surface</strong></summary>
 
 ```bash
 git clone https://github.com/Kartik24Hulmukh/Kairo-Phantom.git
@@ -53,78 +87,41 @@ cd Kairo-Phantom
 python -m pytest tests/test_airgap_zero_egress.py -q
 ```
 
-Published snapshot:
+Published repository snapshot: `12 passed · 0 outbound connections detected`.
 
-```text
-12 passed · 0 outbound connections detected
-```
+**Boundary:** this covers the declared test surface and environment. It is not a universal security certification or independent third-party validation.
+</details>
 
-This is evidence about the tested interfaces and environment, not a universal security certification. Read the repository's benchmark notes and scope boundaries before relying on the result.
+<details>
+<summary><strong>02 · Inspect a code-change evidence capsule</strong></summary>
 
-## Challenge a claim
+Open [Proving Grounds](https://github.com/KairoPhantom/Proving-Grounds), select an example capsule, then compare the declared claim, base/head revisions, commands, results, and adversarial probes.
 
-A public claim should be open to inspection.
+**Boundary:** the capsule is executable evidence for a scoped claim—not formal verification and not a replacement for review.
+</details>
 
-[Challenge a claim](https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=challenge-claim.yml) · [Submit a reproduction](https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=submit-reproduction.yml) · [Report a missing boundary](https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=challenge-claim.yml)
+<details>
+<summary><strong>03 · Challenge the profile itself</strong></summary>
 
-Useful challenges include:
+If a role, metric, maturity label, or technical statement is too broad, [open a claim challenge](https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=challenge-claim.yml). Reproductions can be submitted through the dedicated issue form.
+</details>
 
-- a command that does not reproduce the stated result;
-- a limitation that is easy to miss;
-- a maturity label that does not match the repository;
-- evidence that depends too heavily on the project author's own implementation.
+## On the bench
 
-## What I am testing now
+<!-- NOW:START -->
+- Separate producer and verifier implementations for agent receipts.
+- Detect deliberately weakened tests instead of rewarding convincing patch prose.
+- Preserve uncertainty in public-interest software without making the product unusable.
+<!-- NOW:END -->
 
-- Whether agent receipts remain independently verifiable when the producer and verifier use separate implementations.
-- Whether a code-change evidence capsule detects deliberately weakened tests rather than rewarding a convincing patch description.
-- Which desktop-agent capabilities remain valid outside fixture-backed evaluation.
-- How public-interest software can preserve uncertainty without becoming vague or unusable.
+## One failure worth keeping
 
-## Failure log
+> **Presentation came before governance in early RGIT Rozgar work.** The correction was structural: permissions, review workflows, policies, security controls, and automated tests became foundations rather than polish.
 
-| What went wrong or remained uncertain | What changed afterward |
-|---|---|
-| A clean verification environment did not contain Cargo. | Rust test counts were not presented as independently reproduced. |
-| Fixture-backed workflows could be mistaken for general live-GUI reliability. | Live GUI control remains explicitly experimental. |
-| Early RGIT Rozgar work emphasized presentation before governance. | Permissions, review workflows, policies, security controls, and automated tests became foundational. |
-| Reproducible benchmarks are still maintained by the project author. | Independent reproductions are tracked as a separate requirement rather than implied. |
-
-## Community software
-
-Some of my most useful work starts with a plain question: **what is harder for students than it needs to be?**
-
-That has led to RGIT Rozgar, event-discovery tools, student feedback flows, a counselling intake portal, and peer-learning experiments. These are not presented as large-scale impact claims. They are places where I learned to build around real constraints, ownership, and handoff.
-
-## Learning in public
-
-I am participating in the Gumloop learning cohort and community, working with AI agents, MCP integrations, tool calling, workflows, and automation through practical builds and peer feedback.
-
-The useful loop is simple:
-
-```text
-learn → make → test → explain → repeat
-```
-
-## How I work
-
-- Start with the user and operating constraint, not the technology label.
-- Put consequential actions behind explicit permission or human confirmation.
-- Test the failure path, not only the demonstration path.
-- Separate verified behavior from experimental work.
-- Document the boundary as carefully as the capability.
-- Leave enough context for another person to operate or challenge the system.
-
-## Systems shelf
-
-- **BlueMeshNet** — encrypted mesh communication for infrastructure-constrained environments.
-- **Rerun** — causal execution recording for system-level failures.
-- **Stratum** — a semantic filesystem organized around document and code structure.
-
-These remain off the main evidence table until their public repositories, demos, and reproduction paths are ready.
+[Read the operating notes and claim policy →](./docs/OPERATING_NOTES.md)
 
 ## Contact
 
-I am interested in local-first AI, verifiable agents, developer tooling, security, distributed systems, and software for student communities.
+Mumbai, India · Computer Engineering student · Gumloop learning cohort and community
 
-[Email](mailto:kartikhulmukh24@gmail.com) · [LinkedIn](https://www.linkedin.com/in/kartik-hulmukh-74081236a/) · [RGIT Rozgar](https://rgitrozgar.in) · [All repositories](https://github.com/Kartik24Hulmukh?tab=repositories)
+[Email](mailto:kartikhulmukh24@gmail.com) · [LinkedIn](https://www.linkedin.com/in/kartik-hulmukh-74081236a/) · [RGIT Rozgar](https://rgitrozgar.in) · [Repositories](https://github.com/Kartik24Hulmukh?tab=repositories)

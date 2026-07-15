@@ -1,41 +1,41 @@
-name: Challenge a public claim
-description: Report a claim that is unclear, overstated, stale, or difficult to reproduce
-title: '[claim] '
-labels: ['claim-review']
+name: Challenge a claim
+description: Report a claim that is incorrect, too broad, stale, or missing a boundary.
+title: "[claim challenge] "
+labels:
+  - evidence/challenge
+  - needs-triage
 body:
-  - type: dropdown
-    id: project
-    attributes:
-      label: Project
-      options:
-        - Kairo-Phantom
-        - RGIT Rozgar
-        - Project X-Ray India
-        - Proving Grounds
-        - Profile README
-    validations:
-      required: true
-  - type: textarea
+  - type: input
     id: claim
     attributes:
-      label: Claim being challenged
-      description: Quote or link to the exact wording.
+      label: Claim or claim ID
+      description: Quote the exact statement.
+      placeholder: kairo-airgap-001
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Repository and revision
+      placeholder: owner/repo@commit
+  - type: textarea
+    id: concern
+    attributes:
+      label: "What appears incorrect or too broad?"
     validations:
       required: true
   - type: textarea
-    id: attempt
+    id: reproduce
     attributes:
-      label: Reproduction or review attempted
-      description: Include commands, environment, links, or reasoning.
-    validations:
-      required: true
+      label: Reproduction command and observed result
   - type: textarea
-    id: observed
+    id: evidence
     attributes:
-      label: What you observed
-    validations:
-      required: true
-  - type: textarea
-    id: boundary
+      label: Public evidence links
+  - type: checkboxes
+    id: safety
     attributes:
-      label: Missing evidence or boundary
+      label: Safety
+      options:
+        - label: I confirm this report contains no secrets or private data.
+          required: true

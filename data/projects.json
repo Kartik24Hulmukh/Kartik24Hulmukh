@@ -1,28 +1,34 @@
 {
   "projects": [
     {
-      "name": "Kairo-Phantom",
-      "repo": "Kartik24Hulmukh/Kairo-Phantom",
-      "branch": "master",
-      "display_status": "pre-launch"
-    },
-    {
+      "id": "rgit",
       "name": "RGIT Rozgar",
-      "repo": "Kartik24Hulmukh/unified-experience",
-      "branch": "main",
-      "display_status": "deployed"
+      "repository": "Kartik24Hulmukh/unified-experience",
+      "role": "Founder \u00b7 Product Engineer \u00b7 Operator",
+      "maturity": "deployed",
+      "url": "https://rgitrozgar.in"
     },
     {
+      "id": "kairo",
+      "name": "Kairo-Phantom",
+      "repository": "Kartik24Hulmukh/Kairo-Phantom",
+      "role": "Lead Builder \u00b7 Maintainer",
+      "maturity": "pre-launch",
+      "upstream": "KairoPhantom/Kairo-Phantom"
+    },
+    {
+      "id": "xray",
       "name": "Project X-Ray India",
-      "repo": "Kartik24Hulmukh/project-xray-india",
-      "branch": "main",
-      "display_status": "public beta"
+      "repository": "Kartik24Hulmukh/project-xray-india",
+      "role": "Engineering Contributor",
+      "maturity": "public beta"
     },
     {
+      "id": "proving",
       "name": "Proving Grounds",
-      "repo": "Kartik24Hulmukh/Proving-Grounds",
-      "branch": "main",
-      "display_status": "experimental"
+      "repository": "KairoPhantom/Proving-Grounds",
+      "role": "Builder \u00b7 Contributor",
+      "maturity": "experimental"
     }
   ]
 }
