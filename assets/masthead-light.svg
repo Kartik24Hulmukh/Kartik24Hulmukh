@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img"><rect width="100%" height="100%" fill="#efe6d3"/>
 <text x="54" y="62" font-family="Arial" font-size="13" fill="#675f53" letter-spacing="2">MUMBAI / PUBLIC WORK / JULY 2026</text>
 <line x1="54" y1="82" x2="1146" y2="82" stroke="#b8ad98"/>
-<text x="50" y="210" font-family="Georgia" font-size="96" font-weight="700" fill="#1c1b18">KARTIK</text>
-<text x="50" y="318" font-family="Georgia" font-size="96" font-weight="700" fill="#1c1b18">HULMUKH</text>
-<text x="640" y="168" font-family="Georgia" font-size="28" fill="#a93629">Software for people nearby.</text>
-<text x="640" y="214" font-family="Georgia" font-size="28" fill="#1c1b18">Systems that don't ask for trust.</text>
-<line x1="640" y1="248" x2="1146" y2="248" stroke="#b8ad98"/>
-<text x="640" y="288" font-family="Arial" font-size="17" fill="#675f53">FOUNDER · RGIT ROZGAR</text>
-<text x="640" y="322" font-family="Arial" font-size="17" fill="#675f53">BUILDER · VERIFIABLE AI SYSTEMS</text>
-<text x="640" y="386" font-family="Arial" font-size="15" fill="#315a8a">build → test → publish the boundary → invite challenge</text>
+<text x="50" y="220" font-family="Georgia" font-size="92" font-weight="700" fill="#1c1b18">KARTIK</text>
+<text x="50" y="330" font-family="Georgia" font-size="92" font-weight="700" fill="#1c1b18">HULMUKH</text>
+<text x="700" y="160" font-family="Georgia" font-size="26" fill="#a93629">Software for people nearby.</text>
+<text x="700" y="204" font-family="Georgia" font-size="26" fill="#1c1b18">Systems that don't ask for trust.</text>
+<line x1="700" y1="236" x2="1146" y2="236" stroke="#b8ad98"/>
+<text x="700" y="278" font-family="Arial" font-size="16" fill="#675f53">FOUNDER · RGIT ROZGAR</text>
+<text x="700" y="310" font-family="Arial" font-size="16" fill="#675f53">BUILDER · VERIFIABLE AI SYSTEMS</text>
+<text x="700" y="372" font-family="Arial" font-size="15" fill="#315a8a">build → test → publish the boundary</text>
+<text x="700" y="398" font-family="Arial" font-size="15" fill="#315a8a">→ invite challenge</text>
 <text x="54" y="480" font-family="Arial" font-size="12" fill="#675f53">ISSUE 01 · THINGS BUILT, TESTED, AND STILL UNCERTAIN</text>
 </svg>

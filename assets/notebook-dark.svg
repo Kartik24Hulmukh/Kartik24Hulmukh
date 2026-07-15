@@ -1,15 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img"><rect width="100%" height="100%" fill="#141310"/>
-<text x="54" y="60" font-family="Arial" font-size="13" fill="#e16654" letter-spacing="2">SYSTEMS NOTEBOOK / RECURRING METHOD</text>
-<text x="54" y="140" font-family="Georgia" font-size="42" fill="#f3ead8">01 claim</text>
-<text x="330" y="140" font-family="Georgia" font-size="42" fill="#f3ead8">02 test</text>
-<text x="600" y="140" font-family="Georgia" font-size="42" fill="#f3ead8">03 counterexample</text>
-<text x="960" y="140" font-family="Georgia" font-size="42" fill="#f3ead8">04 boundary</text>
-<path d="M230 128 H300 M440 128 H570 M900 128 H940" stroke="#e16654" stroke-width="3"/>
-<line x1="54" y1="190" x2="1146" y2="190" stroke="#4a4439"/>
-<text x="54" y="250" font-family="Arial" font-size="15" fill="#b9ad98">PROJECT X-RAY INDIA</text>
-<text x="54" y="292" font-family="Georgia" font-size="28" fill="#f3ead8">Sources before conclusions.</text>
-<text x="650" y="250" font-family="Arial" font-size="15" fill="#b9ad98">PROVING GROUNDS</text>
-<text x="650" y="292" font-family="Georgia" font-size="28" fill="#f3ead8">The patch does not grade itself.</text>
-<line x1="54" y1="340" x2="1146" y2="340" stroke="#4a4439"/>
-<text x="54" y="400" font-family="Arial" font-size="17" fill="#83a9d5">A passing test is evidence about an oracle and a surface—not permission to stop thinking.</text>
+<text x="54" y="58" font-family="Arial" font-size="13" fill="#e16654" letter-spacing="2">SYSTEMS NOTEBOOK / RECURRING METHOD</text>
+<text x="54" y="130" font-family="Georgia" font-size="40" fill="#f3ead8">01 claim</text>
+<text x="320" y="130" font-family="Georgia" font-size="40" fill="#f3ead8">02 test</text>
+<path d="M230 118 H290" stroke="#e16654" stroke-width="3"/>
+<text x="54" y="205" font-family="Georgia" font-size="40" fill="#f3ead8">03 counterexample</text>
+<path d="M430 193 H500" stroke="#e16654" stroke-width="3"/>
+<text x="540" y="205" font-family="Georgia" font-size="40" fill="#f3ead8">04 boundary</text>
+<line x1="54" y1="250" x2="1146" y2="250" stroke="#4a4439"/>
+<text x="54" y="310" font-family="Arial" font-size="15" fill="#b9ad98">PROJECT X-RAY INDIA</text>
+<text x="54" y="352" font-family="Georgia" font-size="28" fill="#f3ead8">Sources before conclusions.</text>
+<text x="650" y="310" font-family="Arial" font-size="15" fill="#b9ad98">PROVING GROUNDS</text>
+<text x="650" y="352" font-family="Georgia" font-size="28" fill="#f3ead8">The patch does not grade itself.</text>
+<line x1="54" y1="400" x2="1146" y2="400" stroke="#4a4439"/>
+<text x="54" y="455" font-family="Arial" font-size="17" fill="#83a9d5">A passing test is evidence about an oracle and a surface—not permission to stop thinking.</text>
 </svg>
