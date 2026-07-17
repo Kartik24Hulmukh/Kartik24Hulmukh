@@ -1,39 +1,13 @@
-# Proof Loom package
+# Systems in Motion package
 
-Ready-to-push GitHub profile repository contents.
+- `README.md` — GitHub profile
+- `assets/hero-light.svg`, `assets/hero-dark.svg` — theme-aware masthead
+- `docs/` — dependency-free interactive GitHub Pages experience
+- `docs/data/projects.json` — bounded project statements
+- `scripts/render_assets.py` — deterministic artwork generator
+- `scripts/validate.py` — content, claim, YAML, and package checks
+- `.github/workflows/` — validation and Pages deployment
+- `.github/ISSUE_TEMPLATE/` — statement challenges and reproductions
+- `DEPLOY.md` — deployment and rollback checklist
 
-## Profile
-
-- `README.md` — concise profile entry and canonical project summary.
-- `assets/proof-loom-light.svg` — generated light README artwork.
-- `assets/proof-loom-dark.svg` — generated dark README artwork.
-
-## Interactive GitHub Pages experience
-
-- `docs/index.html`
-- `docs/styles.css`
-- `docs/app.js`
-- `docs/data/evidence.json`
-- `docs/assets/favicon.svg`
-
-## Automation
-
-- `scripts/render_profile.py`
-- `scripts/validate.py`
-- `.github/workflows/validate.yml`
-- `.github/workflows/pages.yml`
-
-## Public verification interface
-
-- `.github/ISSUE_TEMPLATE/challenge-claim.yml`
-- `.github/ISSUE_TEMPLATE/submit-reproduction.yml`
-- `.github/ISSUE_TEMPLATE/config.yml`
-
-## Documentation
-
-- `docs/ARCHITECTURE.md`
-- `docs/ACCESSIBILITY.md`
-- `docs/CLAIM_POLICY.md`
-- `docs/DEPLOY.md`
-
-The interactive challenges are explanatory simulations. They do not execute or certify the featured repositories.
+The three interactive mechanisms are explanatory fixtures, not live repository execution or certification.
