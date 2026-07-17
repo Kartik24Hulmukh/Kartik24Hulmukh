@@ -1,30 +1,25 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json,re,sys,yaml
-ROOT=Path(__file__).resolve().parents[1]; errors=[]
-try:data=json.loads((ROOT/'docs/data/evidence.json').read_text())
-except Exception as e: data={}; errors.append(f'evidence.json: {e}')
-projects=data.get('projects',[])
-if len(projects)!=4: errors.append('Expected exactly four public project records')
-required={'id','name','role','maturity','statement','repository','commit','evidence','boundaries','challenges'}
-for i,p in enumerate(projects):
- missing=required-set(p)
- if missing: errors.append(f'Project {i} missing {sorted(missing)}')
- if not p.get('evidence'): errors.append(f'Project {i} has no evidence')
- if not p.get('boundaries'): errors.append(f'Project {i} has no boundaries')
- if not str(p.get('repository','')).startswith('https://github.com/'): errors.append(f'Project {i} repository must be GitHub HTTPS')
-for f in ['README.md','docs/index.html','docs/styles.css','docs/app.js','assets/proof-loom-light.svg','assets/proof-loom-dark.svg']:
- if not (ROOT/f).exists(): errors.append('Missing '+f)
-readme=(ROOT/'README.md').read_text()
-for bad in ['unhackable','100% secure','industry-leading','prompt-injection-proof','independently validated system']:
- if bad.lower() in readme.lower(): errors.append('Forbidden claim: '+bad)
-html=(ROOT/'docs/index.html').read_text()
-for token in ['id="direct-index"','id="loom"','aria-live="polite"','Skip the interactive loom']:
- if token not in html: errors.append('HTML missing '+token)
-for p in list((ROOT/'.github/workflows').glob('*.yml'))+list((ROOT/'.github/ISSUE_TEMPLATE').glob('*.yml')):
- try: yaml.safe_load(p.read_text())
- except Exception as e: errors.append(f'{p}: {e}')
-if re.search(r'<script[^>]+src="https?://',html,re.I): errors.append('External script dependency found')
-if errors:
- print('\n'.join(errors)); sys.exit(1)
-print('Proof Loom validation passed.')
+import json,sys,re,yaml
+R=Path(__file__).resolve().parents[1]; errors=[]
+required=['README.md','assets/hero-light.svg','assets/hero-dark.svg','docs/index.html','docs/styles.css','docs/app.js','docs/data/projects.json']
+for f in required:
+ if not (R/f).exists():errors.append('Missing '+f)
+try:d=json.loads((R/'docs/data/projects.json').read_text())
+except Exception as e:d={};errors.append('JSON '+str(e))
+if len(d.get('projects',[]))!=3:errors.append('Expected three projects')
+for p in d.get('projects',[]):
+ for k in ['id','name','role','maturity','summary','repo','boundary','interaction']:
+  if not p.get(k):errors.append(f'{p.get("id","?")} missing {k}')
+alltext='\n'.join(p.read_text(errors='ignore') for p in R.rglob('*') if p.is_file() and p.suffix in {'.md','.html','.css','.js','.json','.svg','.yml','.py'})
+for bad in [('rgit'+' rozgar'),('unified'+'-experience')]:
+ if bad.lower() in alltext.lower():errors.append('Excluded project reference found')
+unsupported=[('guaranteed'+' selection'),('un'+'hackable'),('100%'+' secure'),('independently validated'+' system')]
+for bad in unsupported:
+ if bad.lower() in alltext.lower():errors.append('Unsupported phrase found')
+for p in list((R/'.github').rglob('*.yml')):
+ try:yaml.safe_load(p.read_text())
+ except Exception as e:errors.append(f'{p}: {e}')
+if re.search(r'<script[^>]+src=["\']https?://',(R/'docs/index.html').read_text(),re.I):errors.append('External script found')
+if errors:print('\n'.join(errors));sys.exit(1)
+print('Systems in Motion validation passed.')
