@@ -1,47 +1,36 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/masthead-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/masthead-light.svg">
-  <img src="./assets/masthead-light.svg" width="100%" alt="Kartik Hulmukh — software for people nearby; systems that do not ask for trust">
-</picture>
+<div align="center">
+  <a href="https://kartik24hulmukh.github.io/Kartik24Hulmukh/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/proof-loom-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/proof-loom-light.svg">
+      <img src="./assets/proof-loom-light.svg" width="100%" alt="The Proof Loom — four project strands held together by inspectable evidence">
+    </picture>
+  </a>
+</div>
 
-I build at two scales: the immediate problems students face around me, and the deeper trust problems that appear when software acts on someone's behalf.
+# Kartik Hulmukh
 
-**Mumbai · Computer Engineering · community technology founder · open-source systems builder**
+**I build useful software and the evidence needed to challenge what it claims.**
 
-[Live product](https://rgitrozgar.in) · [Source](https://github.com/Kartik24Hulmukh?tab=repositories) · [Public evidence](https://kartik24hulmukh.github.io/Kartik24Hulmukh/) · [Write to me](mailto:kartikhulmukh24@gmail.com)
+Mumbai · Computer Engineering · Founder of RGIT Rozgar · Builder of local-first and verifiable systems
 
----
+[**Operate the Proof Loom →**](https://kartik24hulmukh.github.io/Kartik24Hulmukh/) · [Direct project index](https://kartik24hulmukh.github.io/Kartik24Hulmukh/?view=simple) · [Email](mailto:kartikhulmukh24@gmail.com) · [LinkedIn](https://www.linkedin.com/in/kartik-hulmukh-74081236a/)
 
-## Field note 01 · RGIT Rozgar
+## Two systems worth opening first
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/rgit-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/rgit-light.svg">
-  <img src="./assets/rgit-light.svg" width="100%" alt="RGIT Rozgar field note — a useful campus should not require fifteen WhatsApp groups">
-</picture>
+### [RGIT Rozgar](https://rgitrozgar.in)
 
-I founded, designed, built, deployed, and maintain **[RGIT Rozgar](https://rgitrozgar.in)** ([source](https://github.com/Kartik24Hulmukh/unified-experience)): one governed place for accommodation, resale, academic resources, food services, and nearby healthcare.
+**Founder · Product Engineer · Operator**
 
-The difficult part is not the listing grid. It is participation, moderation, permissions, disputes, deployment, and keeping the service useful after launch.
+A deployed campus resource platform for accommodation, resale, academic resources, food services, and nearby healthcare. I designed, built, deployed, and maintain it. Its difficult parts are participation, moderation, permissions, disputes, and continued operation—not the listing grid.
 
-**Public boundary:** campus-specific. I publish adoption figures only when they are measured.
+**Boundary:** campus-specific. Adoption figures are published only when measured.
 
----
+### [Kairo-Phantom](https://github.com/Kartik24Hulmukh/Kairo-Phantom)
 
-## Receipt 02 · Kairo-Phantom
+**Lead Builder · Maintainer · Pre-launch**
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/kairo-receipt-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/kairo-receipt-light.svg">
-  <img src="./assets/kairo-receipt-light.svg" width="100%" alt="Kairo-Phantom evidence receipt showing local operation, human confirmation, evidence chain, and validation boundary">
-</picture>
-
-**[Kairo-Phantom](https://github.com/Kartik24Hulmukh/Kairo-Phantom)** is a pre-launch local-first desktop agent. Consequential actions require human confirmation; actions produce signed, hash-chained records that a separately runnable verifier can inspect.
-
-I work on it as **lead builder and maintainer** while preserving its upstream history from [`KairoPhantom/Kairo-Phantom`](https://github.com/KairoPhantom/Kairo-Phantom).
-
-<details>
-<summary><strong>Reproduce one published repository result</strong></summary>
+A local-first desktop agent with human confirmation for consequential actions and signed, hash-chained action records that a separately runnable verifier can inspect.
 
 ```bash
 git clone https://github.com/Kartik24Hulmukh/Kairo-Phantom.git
@@ -49,45 +38,17 @@ cd Kairo-Phantom
 python -m pytest tests/test_airgap_zero_egress.py -q
 ```
 
-Published snapshot: `12 passed · 0 outbound connections detected`
+Published repository snapshot: `12 passed · 0 outbound connections detected`
 
-This is evidence for the declared test surface and environment—not universal security certification or third-party validation. [Inspect the benchmark](https://github.com/Kartik24Hulmukh/Kairo-Phantom/blob/master/BENCHMARKS.md).
-</details>
+**Boundary:** evidence for the declared test surface and environment—not universal security certification or independent third-party validation.
 
----
+## Also in the weave
 
-## Systems notebook
+- **[Project X-Ray India](https://github.com/Kartik24Hulmukh/project-xray-india)** — engineering contributor; source-linked public-infrastructure claims for human investigation. It does not determine corruption.
+- **[Proving Grounds](https://github.com/KairoPhantom/Proving-Grounds)** — builder and contributor; behavioral claims tested across revisions with replayable evidence capsules. Bounded executable evidence, not formal proof.
 
-**03.1 · [Project X-Ray India](https://github.com/Kartik24Hulmukh/project-xray-india)**  
-Source-linked public-infrastructure claims for human review. It preserves uncertainty and supports investigation; it does not determine corruption. **Role: engineering contributor.**
+## Challenge the profile
 
-**03.2 · [Proving Grounds](https://github.com/KairoPhantom/Proving-Grounds)**  
-Runs explicit behavioral claims across code revisions and emits replayable evidence capsules. It produces bounded executable evidence—not formal proof. **Role: builder and contributor.**
+[Challenge a claim](https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=challenge-claim.yml) · [Submit a reproduction](https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=submit-reproduction.yml) · [Inspect the evidence manifest](./docs/data/evidence.json)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/notebook-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/notebook-light.svg">
-  <img src="./assets/notebook-light.svg" width="100%" alt="Systems notebook showing claim, test, counterexample, and boundary as the engineering loop">
-</picture>
-
----
-
-## Corrections desk
-
-If a public statement is wrong, too broad, stale, or missing a limitation, do not take my word for it:
-
-[Challenge a claim](https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=challenge-claim.yml) · [Submit a reproduction](https://github.com/Kartik24Hulmukh/Kartik24Hulmukh/issues/new?template=submit-reproduction.yml) · [Inspect the evidence atlas](https://kartik24hulmukh.github.io/Kartik24Hulmukh/) · [Local evidence files](./docs/)
-
-<details>
-<summary><strong>Repository state and automation</strong></summary>
-
-The profile repository collects revision, completed CI state, and real releases only from an explicit allowlist. Generated state is stored in [`data/snapshot.json`](./data/snapshot.json). A passing workflow is repository state—not a quality, adoption, or security score.
-</details>
-
----
-
-> **No source → no answer.  
-> No oracle → no claim.  
-> No negative test → no confidence.**
-
-Mumbai, India · [Email](mailto:kartikhulmukh24@gmail.com) · [LinkedIn](https://www.linkedin.com/in/kartik-hulmukh-74081236a/)
+<sub>The immersive experience is optional. Every essential claim, boundary, project link, and contact path remains available as semantic text.</sub>

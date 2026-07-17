@@ -1,11 +1,39 @@
-# Package contents
+# Proof Loom package
 
-- `README.md` — concise GitHub-native Verified Noticeboard profile.
-- `assets/*.svg` — deterministic light/dark editorial panels.
-- `data/` — manually approved projects, claims, current work, and generated snapshot.
-- `scripts/` — allowlisted collector, editorial renderer, and validator.
-- `.github/workflows/` — read-only verification and least-privilege refresh.
-- `.github/ISSUE_TEMPLATE/` — claim challenge and reproduction interface.
-- `docs/` — Evidence Atlas (GitHub Pages), deployment notes, operating boundaries, recruiter path.
+Ready-to-push GitHub profile repository contents.
 
-This package replaces the Build Console design completely.
+## Profile
+
+- `README.md` — concise profile entry and canonical project summary.
+- `assets/proof-loom-light.svg` — generated light README artwork.
+- `assets/proof-loom-dark.svg` — generated dark README artwork.
+
+## Interactive GitHub Pages experience
+
+- `docs/index.html`
+- `docs/styles.css`
+- `docs/app.js`
+- `docs/data/evidence.json`
+- `docs/assets/favicon.svg`
+
+## Automation
+
+- `scripts/render_profile.py`
+- `scripts/validate.py`
+- `.github/workflows/validate.yml`
+- `.github/workflows/pages.yml`
+
+## Public verification interface
+
+- `.github/ISSUE_TEMPLATE/challenge-claim.yml`
+- `.github/ISSUE_TEMPLATE/submit-reproduction.yml`
+- `.github/ISSUE_TEMPLATE/config.yml`
+
+## Documentation
+
+- `docs/ARCHITECTURE.md`
+- `docs/ACCESSIBILITY.md`
+- `docs/CLAIM_POLICY.md`
+- `docs/DEPLOY.md`
+
+The interactive challenges are explanatory simulations. They do not execute or certify the featured repositories.

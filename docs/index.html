@@ -2,93 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A public evidence atlas for Kartik Hulmukh's selected projects.">
-  <title>Kartik Hulmukh — Public Evidence Atlas</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d0f">
+  <meta name="description" content="The Proof Loom — inspect, tension, and challenge the evidence holding Kartik Hulmukh's selected projects together.">
+  <title>The Proof Loom — Kartik Hulmukh</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header>
-    <p class="folio">PUBLIC EVIDENCE ATLAS · JULY 2026</p>
-    <h1>Claims should have<br>somewhere to point.</h1>
-    <p class="dek">An inspectable index connecting selected project statements to source, reproduction paths, and known boundaries.</p>
-  </header>
-  <main>
-    <nav aria-label="Filter records">
-      <button type="button" class="active" data-filter="all">All records</button>
-      <button type="button" data-filter="product">Product</button>
-      <button type="button" data-filter="system">Systems</button>
-      <button type="button" data-filter="boundary">Boundaries</button>
+  <a class="skip-link" href="#direct-index">Skip the interactive loom</a>
+  <noscript><div class="noscript">JavaScript is unavailable. The complete direct project index remains below.</div></noscript>
+
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="The Proof Loom home">THE PROOF LOOM <span>/ KH</span></a>
+    <nav aria-label="Primary navigation">
+      <button id="simple-toggle" type="button" aria-pressed="false">Simple view</button>
+      <button id="motion-toggle" type="button" aria-pressed="false">Reduce motion</button>
+      <button id="sound-toggle" type="button" aria-pressed="false">Sound off</button>
+      <a href="https://github.com/Kartik24Hulmukh">GitHub</a>
     </nav>
-    <section id="records" aria-live="polite">
-      <noscript>
-        <article class="record">
-          <div class="number">01</div>
-          <div>
-            <p class="role">Founder · Product Engineer · Operator</p>
-            <h2>RGIT Rozgar</h2>
-            <p>A deployed campus resource platform for accommodation, resale, academics, food, and nearby healthcare.</p>
-            <a href="https://rgitrozgar.in">Inspect public record →</a>
-          </div>
-          <div class="evidence">
-            <strong>Evidence</strong>
-            <p>Live product and public source repository.</p>
-            <strong>Boundary</strong>
-            <p>Campus-specific; adoption figures published only when measured.</p>
-          </div>
-        </article>
-        <article class="record">
-          <div class="number">02</div>
-          <div>
-            <p class="role">Lead Builder · Maintainer · Pre-launch</p>
-            <h2>Kairo-Phantom</h2>
-            <p>A local-first agent with human confirmation and signed, hash-chained action records.</p>
-            <a href="https://github.com/Kartik24Hulmukh/Kairo-Phantom">Inspect public record →</a>
-          </div>
-          <div class="evidence">
-            <strong>Evidence</strong>
-            <p>Published benchmark, test commands, separately runnable verifier.</p>
-            <strong>Boundary</strong>
-            <p>Repository evidence; third-party validation pending.</p>
-          </div>
-        </article>
-        <article class="record">
-          <div class="number">03</div>
-          <div>
-            <p class="role">Engineering Contributor · Public beta</p>
-            <h2>Project X-Ray India</h2>
-            <p>Source-linked public-infrastructure claims organized for human investigation.</p>
-            <a href="https://github.com/Kartik24Hulmukh/project-xray-india">Inspect public record →</a>
-          </div>
-          <div class="evidence">
-            <strong>Evidence</strong>
-            <p>Repository, evidence policy, review gates.</p>
-            <strong>Boundary</strong>
-            <p>Supports investigation; does not determine corruption.</p>
-          </div>
-        </article>
-        <article class="record">
-          <div class="number">04</div>
-          <div>
-            <p class="role">Builder · Contributor · Experimental</p>
-            <h2>Proving Grounds</h2>
-            <p>Behavioral claims tested across code revisions with replayable evidence capsules.</p>
-            <a href="https://github.com/KairoPhantom/Proving-Grounds">Inspect public record →</a>
-          </div>
-          <div class="evidence">
-            <strong>Evidence</strong>
-            <p>Repository examples and replay paths.</p>
-            <strong>Boundary</strong>
-            <p>Bounded executable evidence, not formal proof.</p>
-          </div>
-        </article>
-      </noscript>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Kartik Hulmukh · Mumbai · July 2026</p>
+        <h1 id="hero-title">Pull the claim.<br>Inspect the strand.<br><em>Break the evidence.</em></h1>
+        <p class="lede">A living model of four projects. The fabric holds only while its sources, tests, review gates, and boundaries remain attached.</p>
+        <div class="hero-actions">
+          <button id="begin-button" class="primary" type="button">Operate the loom</button>
+          <a class="secondary" href="#direct-index">Read directly</a>
+        </div>
+      </div>
+      <div class="status" aria-label="Current public evidence summary">
+        <span>04 project strands</span><span>01 deployed product</span><span>01 pre-launch system</span><span>02 experimental records</span>
+      </div>
+    </section>
+
+    <section id="loom-section" class="loom-section" aria-labelledby="loom-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">Interactive instrument</p><h2 id="loom-heading">The loom</h2></div>
+        <p>Drag the shuttle horizontally. Select or pull a strand. Apply a controlled challenge. No project claim changes—only this explanatory model.</p>
+      </div>
+
+      <div class="loom-shell">
+        <canvas id="loom" width="1400" height="820" role="img" aria-label="Interactive proof loom visualizing four project evidence strands"></canvas>
+        <div id="canvas-fallback" class="canvas-fallback" hidden>Graphics are unavailable. Use the complete project index below.</div>
+        <div class="loom-instructions" aria-hidden="true"><span>← → shuttle</span><span>↑ ↓ select</span><span>Enter inspect</span><span>C challenge</span></div>
+      </div>
+
+      <div class="instrument-grid">
+        <section class="strand-panel" aria-labelledby="strand-heading">
+          <p class="eyebrow">Selected strand</p>
+          <h3 id="strand-heading">RGIT Rozgar</h3>
+          <p id="strand-role" class="role">Founder · Product Engineer · Operator</p>
+          <p id="strand-claim"></p>
+          <dl id="strand-facts"></dl>
+          <div class="panel-actions"><a id="strand-source" href="#">Open source</a><button id="inspect-button" type="button">Inspect evidence</button></div>
+        </section>
+
+        <section class="challenge-panel" aria-labelledby="challenge-heading">
+          <p class="eyebrow">Controlled challenge</p>
+          <h3 id="challenge-heading">Apply tension</h3>
+          <p>These switches alter only the visual model. They do not run or certify the real repositories.</p>
+          <div id="challenge-options" class="challenge-options"></div>
+          <button id="reset-challenges" type="button">Reset challenges</button>
+        </section>
+      </div>
+
+      <section id="evidence-drawer" class="evidence-drawer" aria-live="polite" aria-labelledby="drawer-title" hidden>
+        <button id="close-drawer" class="close" type="button" aria-label="Close evidence details">×</button>
+        <p class="eyebrow">Evidence strand</p>
+        <h3 id="drawer-title"></h3>
+        <p id="drawer-statement"></p>
+        <div class="drawer-grid"><div><h4>Evidence</h4><ul id="drawer-evidence"></ul></div><div><h4>Current boundary</h4><ul id="drawer-boundaries"></ul></div></div>
+        <p id="drawer-reproduction" class="reproduction"></p>
+      </section>
+    </section>
+
+    <section id="direct-index" class="direct-index" aria-labelledby="index-title">
+      <div class="section-heading"><div><p class="eyebrow">No canvas required</p><h2 id="index-title">Direct project index</h2></div><p>Canonical text, links, roles, and limitations. This is not an inferior fallback.</p></div>
+      <div id="project-list" class="project-list"></div>
+    </section>
+
+    <section class="principle" aria-label="Operating principle">
+      <p>No source → no answer.</p><p>No oracle → no claim.</p><p>No negative test → no confidence.</p>
     </section>
   </main>
-  <footer>
-    <p>No source → no answer. No oracle → no claim. No negative test → no confidence.</p>
-    <a href="https://github.com/Kartik24Hulmukh">Return to GitHub</a>
-  </footer>
-  <script src="app.js"></script>
+
+  <footer><p>Kartik Hulmukh · Mumbai, India</p><p><a href="mailto:kartikhulmukh24@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/kartik-hulmukh-74081236a/">LinkedIn</a> · <a href="https://github.com/Kartik24Hulmukh">GitHub</a></p></footer>
+  <script type="module" src="./app.js"></script>
 </body>
 </html>

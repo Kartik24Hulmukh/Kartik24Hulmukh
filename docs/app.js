@@ -1,88 +1,29 @@
-const records = [
-  {
-    n: "01",
-    type: ["product"],
-    title: "RGIT Rozgar",
-    role: "Founder · Product Engineer · Operator",
-    claim:
-      "A deployed campus resource platform for accommodation, resale, academics, food, and nearby healthcare.",
-    evidence: "Live product and public source repository.",
-    boundary: "Campus-specific; adoption figures published only when measured.",
-    href: "https://rgitrozgar.in",
-  },
-  {
-    n: "02",
-    type: ["system", "boundary"],
-    title: "Kairo-Phantom",
-    role: "Lead Builder · Maintainer · Pre-launch",
-    claim:
-      "A local-first agent with human confirmation and signed, hash-chained action records.",
-    evidence: "Published benchmark, test commands, separately runnable verifier.",
-    boundary: "Repository evidence; third-party validation pending.",
-    href: "https://github.com/Kartik24Hulmukh/Kairo-Phantom",
-  },
-  {
-    n: "03",
-    type: ["system", "boundary"],
-    title: "Project X-Ray India",
-    role: "Engineering Contributor · Public beta",
-    claim:
-      "Source-linked public-infrastructure claims organized for human investigation.",
-    evidence: "Repository, evidence policy, review gates.",
-    boundary: "Supports investigation; does not determine corruption.",
-    href: "https://github.com/Kartik24Hulmukh/project-xray-india",
-  },
-  {
-    n: "04",
-    type: ["system", "boundary"],
-    title: "Proving Grounds",
-    role: "Builder · Contributor · Experimental",
-    claim:
-      "Behavioral claims tested across code revisions with replayable evidence capsules.",
-    evidence: "Repository examples and replay paths.",
-    boundary: "Bounded executable evidence, not formal proof.",
-    href: "https://github.com/KairoPhantom/Proving-Grounds",
-  },
-];
-
-const root = document.querySelector("#records");
-const buttons = Array.from(document.querySelectorAll("nav button"));
-
-function render(filter = "all") {
-  const filtered = records.filter(
-    (r) => filter === "all" || r.type.includes(filter)
-  );
-  if (!filtered.length) {
-    root.innerHTML = '<p class="empty">No records match this filter.</p>';
-    return;
-  }
-  root.innerHTML = filtered
-    .map(
-      (r) => `<article class="record">
-  <div class="number" aria-hidden="true">${r.n}</div>
-  <div>
-    <p class="role">${r.role}</p>
-    <h2>${r.title}</h2>
-    <p>${r.claim}</p>
-    <a href="${r.href}">Inspect public record →</a>
-  </div>
-  <div class="evidence">
-    <strong>Evidence</strong>
-    <p>${r.evidence}</p>
-    <strong>Boundary</strong>
-    <p>${r.boundary}</p>
-  </div>
-</article>`
-    )
-    .join("");
-}
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    buttons.forEach((x) => x.classList.remove("active"));
-    button.classList.add("active");
-    render(button.dataset.filter);
-  });
-});
-
-render();
+const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const state={projects:[],selected:0,shuttle:.18,pointer:false,pointerY:0,challenges:new Set(),reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,simple:new URLSearchParams(location.search).get('view')==='simple',sound:false,time:0,last:performance.now()};
+const canvas=$('#loom'),ctx=canvas.getContext('2d',{alpha:false}),dpr=Math.min(devicePixelRatio||1,2);
+let audio=null;
+function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function seeded(seed){let h=2166136261;for(const c of seed)h=Math.imul(h^c.charCodeAt(0),16777619);return()=>((h=Math.imul(h^(h>>>15),2246822507))>>>0)/4294967296}
+async function load(){try{const r=await fetch('./data/evidence.json',{cache:'no-store'});if(!r.ok)throw Error(r.status);const data=await r.json();state.projects=data.projects;renderIndex();select(0);bind();resize();if(state.simple){document.body.classList.add('simple');$('#simple-toggle').setAttribute('aria-pressed','true')}if(state.reduced){document.body.classList.add('reduced-motion');$('#motion-toggle').setAttribute('aria-pressed','true')}requestAnimationFrame(frame)}catch(e){console.error(e);$('#canvas-fallback').hidden=false;canvas.hidden=true;$('#strand-claim').textContent='Evidence manifest could not be loaded. Use the direct GitHub profile links.'}}
+function bind(){addEventListener('resize',resize,{passive:true});$('#begin-button').onclick=()=>{$('#loom-section').scrollIntoView({behavior:state.reduced?'auto':'smooth'});pulse(180)};$('#simple-toggle').onclick=()=>{state.simple=!state.simple;document.body.classList.toggle('simple',state.simple);$('#simple-toggle').setAttribute('aria-pressed',state.simple);history.replaceState(null,'',state.simple?'?view=simple':'./')};$('#motion-toggle').onclick=()=>{state.reduced=!state.reduced;document.body.classList.toggle('reduced-motion',state.reduced);$('#motion-toggle').setAttribute('aria-pressed',state.reduced)};$('#sound-toggle').onclick=toggleSound;$('#inspect-button').onclick=openDrawer;$('#close-drawer').onclick=()=>$('#evidence-drawer').hidden=true;$('#reset-challenges').onclick=()=>{state.challenges.clear();renderChallenges();pulse(110)};canvas.addEventListener('pointerdown',e=>{state.pointer=true;canvas.setPointerCapture(e.pointerId);pointer(e);pulse(90)});canvas.addEventListener('pointermove',e=>{if(state.pointer)pointer(e)});canvas.addEventListener('pointerup',e=>{state.pointer=false;canvas.releasePointerCapture(e.pointerId)});canvas.addEventListener('click',e=>{const p=local(e),idx=nearestStrand(p.y);select(idx)});canvas.addEventListener('keydown',keys);canvas.tabIndex=0;addEventListener('keydown',e=>{if(e.target.matches('input,button,a'))return;if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Enter','c','C'].includes(e.key)){canvas.focus();keys(e)}})}
+function keys(e){if(e.key==='ArrowLeft')state.shuttle=Math.max(.05,state.shuttle-.04);if(e.key==='ArrowRight')state.shuttle=Math.min(.95,state.shuttle+.04);if(e.key==='ArrowUp')select((state.selected-1+state.projects.length)%state.projects.length);if(e.key==='ArrowDown')select((state.selected+1)%state.projects.length);if(e.key==='Enter')openDrawer();if(e.key.toLowerCase()==='c'){const first=state.projects[state.selected].challenges[0];toggleChallenge(first.id)}e.preventDefault();pulse(60)}
+function pointer(e){const p=local(e);state.shuttle=Math.max(.05,Math.min(.95,p.x/canvas.clientWidth));state.pointerY=p.y;const idx=nearestStrand(p.y);if(idx!==state.selected)select(idx)}
+function local(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+function nearestStrand(y){const h=canvas.clientHeight,top=h*.23,gap=h*.14;return Math.max(0,Math.min(state.projects.length-1,Math.round((y-top)/gap)))}
+function select(i){if(!state.projects.length)return;state.selected=i;state.challenges.clear();const p=state.projects[i];$('#strand-heading').textContent=p.name;$('#strand-role').textContent=`${p.role} · ${p.maturity}`;$('#strand-claim').textContent=p.statement;$('#strand-source').href=p.repository;$('#strand-facts').innerHTML=`<dt>Commit</dt><dd>${esc(p.commit)}</dd><dt>Evidence</dt><dd>${esc(p.evidence[0])}</dd><dt>Boundary</dt><dd>${esc(p.boundaries[0])}</dd>`;renderChallenges();history.replaceState(null,'',`#strand=${p.id}`);pulse(70)}
+function renderChallenges(){const p=state.projects[state.selected];$('#challenge-options').innerHTML=p.challenges.map(c=>`<button class="challenge-option" type="button" data-id="${esc(c.id)}" aria-pressed="${state.challenges.has(c.id)}"><span>${state.challenges.has(c.id)?'×':'○'}</span><span><strong>${esc(c.label)}</strong><br><small>${esc(c.effect)}</small></span></button>`).join('');$$('.challenge-option').forEach(b=>b.onclick=()=>toggleChallenge(b.dataset.id))}
+function toggleChallenge(id){state.challenges.has(id)?state.challenges.delete(id):state.challenges.add(id);renderChallenges();pulse(150)}
+function openDrawer(){const p=state.projects[state.selected];$('#drawer-title').textContent=p.name;$('#drawer-statement').textContent=p.statement;$('#drawer-evidence').innerHTML=p.evidence.map(x=>`<li>${esc(x)}</li>`).join('');$('#drawer-boundaries').innerHTML=p.boundaries.map(x=>`<li>${esc(x)}</li>`).join('');$('#drawer-reproduction').textContent=p.reproduction?`Reproduce: ${p.reproduction}`:'No one-command reproduction is claimed here; inspect the repository and documentation.';$('#evidence-drawer').hidden=false;$('#close-drawer').focus();pulse(120)}
+function renderIndex(){$('#project-list').innerHTML=state.projects.map((p,i)=>`<article class="project-record" id="project-${esc(p.id)}"><div class="project-number">0${i+1}</div><div><p class="eyebrow">${esc(p.maturity)}</p><h3>${esc(p.name)}</h3><p class="role">${esc(p.role)}</p><p>${esc(p.statement)}</p><div class="project-links"><a href="${esc(p.repository)}">Repository</a>${p.product?`<a href="${esc(p.product)}">Live product</a>`:''}${p.upstream?`<a href="${esc(p.upstream)}">Upstream</a>`:''}</div></div><div class="boundary-column"><p class="meta"><strong>Public evidence</strong></p><p class="meta">${p.evidence.map(esc).join(' · ')}</p><p class="boundary"><strong>Boundary</strong><br>${p.boundaries.map(esc).join(' · ')}</p></div></article>`).join('')}
+function resize(){const r=canvas.getBoundingClientRect();canvas.width=Math.max(1,Math.floor(r.width*dpr));canvas.height=Math.max(1,Math.floor(r.width*(820/1400)*dpr));ctx.setTransform(dpr,0,0,dpr,0,0)}
+function integrity(p){const all=p.challenges.length||1,active=[...state.challenges].filter(x=>p.challenges.some(c=>c.id===x)).length;return Math.max(.14,1-active/all*.72)}
+function frame(now){const dt=Math.min(40,now-state.last);state.last=now;if(!state.reduced)state.time+=dt*.001;draw();requestAnimationFrame(frame)}
+function draw(){const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;ctx.clearRect(0,0,w,h);ctx.fillStyle='#080a0c';ctx.fillRect(0,0,w,h);grid(w,h);frameLoom(w,h);const top=h*.23,gap=h*.14;state.projects.forEach((p,i)=>strand(p,i,top+i*gap,w,h));shuttle(w,h);labels(w,h)}
+function grid(w,h){ctx.strokeStyle='rgba(128,145,154,.08)';ctx.lineWidth=1;const s=Math.max(24,w/28);for(let x=0;x<w;x+=s){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke()}for(let y=0;y<h;y+=s){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke()}}
+function frameLoom(w,h){ctx.strokeStyle='#8b673f';ctx.lineWidth=Math.max(3,w/360);ctx.beginPath();ctx.moveTo(w*.08,h*.11);ctx.lineTo(w*.08,h*.85);ctx.lineTo(w*.92,h*.85);ctx.lineTo(w*.92,h*.11);ctx.stroke();ctx.strokeStyle='#3b444a';ctx.lineWidth=1;ctx.strokeRect(w*.11,h*.14,w*.78,h*.64);for(let x=w*.15;x<w*.88;x+=w*.055){ctx.beginPath();ctx.moveTo(x,h*.14);ctx.lineTo(x,h*.78);ctx.stroke()}}
+function strand(p,i,y,w,h){const selected=i===state.selected,integ=integrity(p),rnd=seeded(p.commit);const left=w*.09,right=w*.91,amp=selected?h*.035:h*.015;ctx.save();ctx.strokeStyle=p.color;ctx.globalAlpha=selected?1:.62;ctx.lineWidth=selected?4:2;ctx.setLineDash(integ<.7?[8,7]:[]);ctx.beginPath();ctx.moveTo(left,y);const segments=22;for(let n=1;n<=segments;n++){const t=n/segments,x=left+(right-left)*t,noise=(rnd()-.5)*amp*(1-integ)*3,wave=Math.sin(t*Math.PI*4+state.time+i)*amp*(1-integ);ctx.lineTo(x,y+noise+wave)}ctx.stroke();ctx.setLineDash([]);if(state.challenges.size&&selected){ctx.fillStyle='#d46f5e';for(let n=0;n<Math.ceil(state.challenges.size*4);n++){const x=w*(.38+rnd()*.38),yy=y+(rnd()-.5)*30;ctx.fillRect(x,yy,2+rnd()*5,2+rnd()*4)}}ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(left-5,y,selected?7:4,0,Math.PI*2);ctx.fill();ctx.restore()}
+function shuttle(w,h){const x=w*(.09+.82*state.shuttle);ctx.save();ctx.translate(x,h*.1);ctx.fillStyle='#d89a55';ctx.strokeStyle='#f1c28b';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(-18,0);ctx.lineTo(18,0);ctx.lineTo(10,h*.73);ctx.lineTo(-10,h*.73);ctx.closePath();ctx.fill();ctx.stroke();ctx.fillStyle='#080a0c';ctx.fillRect(-5,h*.2,10,h*.3);ctx.restore()}
+function labels(w,h){const top=h*.23,gap=h*.14;ctx.font=`${Math.max(11,w/90)}px Arial`;state.projects.forEach((p,i)=>{ctx.fillStyle=i===state.selected?'#f0eadf':'#7e8a91';ctx.fillText(`${String(i+1).padStart(2,'0')}  ${p.name}`,w*.12,top+i*gap-12)});ctx.fillStyle='#79848a';ctx.font=`${Math.max(9,w/120)}px Arial`;ctx.fillText('SOURCE',w*.09,h*.92);ctx.fillText('CLAIM',w*.35,h*.92);ctx.fillText('TEST',w*.58,h*.92);ctx.fillText('BOUNDARY',w*.79,h*.92)}
+function toggleSound(){state.sound=!state.sound;$('#sound-toggle').textContent=state.sound?'Sound on':'Sound off';$('#sound-toggle').setAttribute('aria-pressed',state.sound);if(state.sound&&!audio)audio=new AudioContext();pulse(120)}
+function pulse(ms){if(!state.sound||!audio)return;const o=audio.createOscillator(),g=audio.createGain();o.type='sine';o.frequency.value=120+state.selected*35;g.gain.setValueAtTime(.0001,audio.currentTime);g.gain.exponentialRampToValueAtTime(.035,audio.currentTime+.01);g.gain.exponentialRampToValueAtTime(.0001,audio.currentTime+ms/1000);o.connect(g).connect(audio.destination);o.start();o.stop(audio.currentTime+ms/1000+.02)}
+load();

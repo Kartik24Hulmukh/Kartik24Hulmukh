@@ -1,28 +1,38 @@
 name: Submit a reproduction
-description: Share an independent attempt to reproduce a published claim.
+description: Share an independent attempt to reproduce a published result.
 title: "[reproduction] "
 labels: ["evidence/reproduction", "needs-review"]
 body:
   - type: input
-    id: claim
-    attributes: {label: Claim ID}
-    validations: {required: true}
+    id: project
+    attributes:
+      label: Project and claim
+    validations:
+      required: true
   - type: input
     id: sha
-    attributes: {label: Exact commit SHA}
-    validations: {required: true}
+    attributes:
+      label: Exact commit SHA
+    validations:
+      required: true
   - type: textarea
-    id: env
-    attributes: {label: Environment and commands}
-    validations: {required: true}
+    id: environment
+    attributes:
+      label: Environment and commands
+    validations:
+      required: true
   - type: textarea
     id: result
-    attributes: {label: Observed result and logs}
-    validations: {required: true}
-  - type: checkboxes
-    id: safety
     attributes:
-      label: Safety
+      label: Observed result and public logs
+    validations:
+      required: true
+  - type: checkboxes
+    id: independence
+    attributes:
+      label: Reproduction context
       options:
+        - label: I disclose whether I am affiliated with the project.
+          required: true
         - label: I confirm this submission contains no secrets or private data.
           required: true

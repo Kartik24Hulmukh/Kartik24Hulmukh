@@ -1,15 +1,15 @@
-name: Verify profile
+name: Validate Proof Loom
 on:
-  pull_request:
   push:
     branches: [main]
+  pull_request:
 permissions:
   contents: read
 concurrency:
-  group: profile-verify-${{ github.ref }}
+  group: proof-loom-validate-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  verify:
+  validate:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -19,9 +19,11 @@ jobs:
         uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
         with:
           python-version: "3.12"
-      - name: Render editorial assets
-        run: python scripts/render_editorial.py
-      - name: Validate noticeboard
+      - name: Install validator dependencies
+        run: pip install PyYAML
+      - name: Render profile assets
+        run: python scripts/render_profile.py
+      - name: Validate Proof Loom package
         run: python scripts/validate.py
       - name: Ensure render is deterministic
         run: git diff --exit-code
