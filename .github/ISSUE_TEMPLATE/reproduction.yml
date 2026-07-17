@@ -1,0 +1,30 @@
+name: Submit a reproduction
+description: Share an independent attempt to reproduce a published result.
+title: "[reproduction] "
+labels: ["needs-review"]
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project and exact commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and commands
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Observed result and public logs
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This submission contains no secrets or private data.
+          required: true

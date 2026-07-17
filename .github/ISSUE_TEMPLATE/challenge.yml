@@ -1,0 +1,28 @@
+name: Challenge a public statement
+description: Report an incorrect, stale, or too-broad statement.
+title: "[statement] "
+labels: ["needs-review"]
+body:
+  - type: input
+    id: statement
+    attributes:
+      label: Exact statement
+    validations:
+      required: true
+  - type: textarea
+    id: concern
+    attributes:
+      label: What should be corrected or narrowed?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Public sources or reproduction steps
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This submission contains no credentials or private data.
+          required: true
