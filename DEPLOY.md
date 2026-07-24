@@ -4,6 +4,7 @@
 2. Extract this ZIP and copy every file—including `.github`—to the repository root.
 3. Remove files from superseded profile designs that are not present in this package.
 4. Review `docs/data/projects.json` and keep every role, maturity label, and boundary accurate.
+   The featured lineup is intentionally Kairo-Phantom, LedgerMatch, and AccessDoc. X-Ray (paused pending legal review) and the evaluation-harness experiment folded into Kairo are deliberately excluded, and the validator blocks their slugs so they cannot quietly return.
 5. Run:
 
 ```bash

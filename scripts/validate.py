@@ -12,9 +12,9 @@ for p in d.get('projects',[]):
  for k in ['id','name','role','maturity','summary','repo','boundary','interaction']:
   if not p.get(k):errors.append(f'{p.get("id","?")} missing {k}')
 alltext='\n'.join(p.read_text(errors='ignore') for p in R.rglob('*') if p.is_file() and p.suffix in {'.md','.html','.css','.js','.json','.svg','.yml','.py'})
-for bad in [('rgit'+' rozgar'),('unified'+'-experience')]:
+for bad in [('rgit'+' rozgar'),('unified'+'-experience'),('project'+'-xray'),('proving'+'-grounds'),('Proving'+' Grounds')]:
  if bad.lower() in alltext.lower():errors.append('Excluded project reference found')
-unsupported=[('guaranteed'+' selection'),('un'+'hackable'),('100%'+' secure'),('independently validated'+' system')]
+unsupported=[('guaranteed'+' selection'),('un'+'hackable'),('100%'+' secure'),('independently validated'+' system'),('100'+'x'),('revolution'+'ary'),('game'+'-changing'),('production'+'-ready'),('guaranteed'+' outcome')]
 for bad in unsupported:
  if bad.lower() in alltext.lower():errors.append('Unsupported phrase found')
 for p in list((R/'.github').rglob('*.yml')):
