@@ -1,13 +1,12 @@
-# Systems in Motion package
+# Portfolio source
 
-- `README.md` — GitHub profile
-- `assets/hero-light.svg`, `assets/hero-dark.svg` — theme-aware masthead
-- `docs/` — dependency-free interactive GitHub Pages experience
-- `docs/data/projects.json` — bounded project statements
-- `scripts/render_assets.py` — deterministic artwork generator
-- `scripts/validate.py` — content, claim, YAML, and package checks
-- `.github/workflows/` — validation and Pages deployment
-- `.github/ISSUE_TEMPLATE/` — statement challenges and reproductions
-- `DEPLOY.md` — deployment and rollback checklist
+- `README.md`: GitHub profile copy and scheduled repository-snapshot region.
+- `assets/hero-{dark,light}.svg`: static accessible banner variants.
+- `docs/`: original-design portfolio, robust interactions, embedded fonts, snapshot, favicon and generated sharing assets.
+- `scripts/`: source validation, build-time graphics and narrowly scoped snapshot refresh.
+- `.github/workflows/`: validation, Pages publication and scheduled refresh.
+- `licenses/`: Archivo and Instrument Serif Open Font Licenses.
+- `EVIDENCE.md`: dated public-repository evidence review and limitations.
+- `DEPLOY.md`: maintenance, safe domain setup and rollback.
 
-The three interactive mechanisms are explanatory fixtures, not live repository execution or certification.
+Generated binary graphics are built by Actions; they are not encoded as fake text files in GitHub. The animated banner plays once and has static alternatives. JavaScript, WebGL and cursor-reactive effects belong to the website, not the GitHub README.
