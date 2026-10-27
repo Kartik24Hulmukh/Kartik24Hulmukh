@@ -35,14 +35,6 @@ jobs:
         run: |
           python3 -m pip install --disable-pip-version-check Pillow==11.3.0
           python3 scripts/render_assets.py
-      - name: Select Actions publishing for the existing Pages site
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          mode=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.build_type')
-          if [ "$mode" != workflow ]; then
-            gh api --method PUT "repos/$GITHUB_REPOSITORY/pages" -f build_type=workflow --silent
-          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
