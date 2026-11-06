@@ -66,12 +66,12 @@ Source-linked public-infrastructure claims for human investigation. Supports rev
 <!-- ACTIVITY:START -->
 | Repository | Last pushed (UTC) |
 | :-- | :-- |
+| [Axiom-Grid](https://github.com/Kartik24Hulmukh/Axiom-Grid) | 2026-11-05 |
 | [AccessDoc](https://github.com/Kartik24Hulmukh/AccessDoc) | 2026-11-03 |
-| [Axiom-Grid](https://github.com/Kartik24Hulmukh/Axiom-Grid) | 2026-11-01 |
 | [jittest](https://github.com/Kartik24Hulmukh/jittest) | 2026-10-25 |
 | [project-xray](https://github.com/Kartik24Hulmukh/project-xray) | 2026-10-24 |
 
-<sub>Public repository metadata checked 2026-11-05. Push dates are not adoption or impact metrics.</sub>
+<sub>Public repository metadata checked 2026-11-06. Push dates are not adoption or impact metrics.</sub>
 <!-- ACTIVITY:END -->
 
 ---
