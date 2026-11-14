@@ -1,7 +1,12 @@
 {
-  "generated_at": "2026-11-13T09:26:48Z",
+  "generated_at": "2026-11-14T08:55:05Z",
   "source": "GitHub public repository API; last pushed is not impact or adoption",
   "repositories": [
+    {
+      "name": "project-xray",
+      "pushed_at": "2026-11-14T00:33:06Z",
+      "language": "Python"
+    },
     {
       "name": "AccessDoc",
       "pushed_at": "2026-11-10T11:14:25Z",
@@ -15,11 +20,6 @@
     {
       "name": "Axiom-Grid",
       "pushed_at": "2026-11-07T07:53:01Z",
-      "language": "Python"
-    },
-    {
-      "name": "project-xray",
-      "pushed_at": "2026-10-24T00:33:16Z",
       "language": "Python"
     }
   ]
