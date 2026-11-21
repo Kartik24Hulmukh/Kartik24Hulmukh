@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-20T09:57:17Z",
+  "generated_at": "2026-11-21T09:41:14Z",
   "source": "GitHub public repository API; last pushed is not impact or adoption",
   "repositories": [
     {
-      "name": "AccessDoc",
-      "pushed_at": "2026-11-17T11:14:22Z",
+      "name": "project-xray",
+      "pushed_at": "2026-11-21T00:33:01Z",
       "language": "Python"
     },
     {
-      "name": "project-xray",
-      "pushed_at": "2026-11-14T00:33:06Z",
+      "name": "AccessDoc",
+      "pushed_at": "2026-11-17T11:14:22Z",
       "language": "Python"
     },
     {
